@@ -1,0 +1,84 @@
+.window {
+    text-align: center;
+}
+
+.container {
+    $sgray: #e0e0e0;
+    $boxc: #81c784;
+    background-color: $sgray;
+    height: 80vh;
+    width: 80vh;
+    border-radius: 5px;
+    margin: auto;
+    margin-top: 50px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-flow: wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    flex-grow: 1;
+    padding: 10px;
+    .emptybox {
+        height: 25%;
+        width: 25%;
+        margin: 15px;
+        padding: 0px;
+    }
+    .box {
+        height: 25%;
+        width: 25%;
+        margin: 15px;
+        padding: 0px;
+        background-color: $boxc;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        transition: ease 100ms;
+        .number {
+            text-align: center;
+            display: block;
+            padding: 5px;
+            border-radius: 50%;
+            margin: auto;
+            height: 30px;
+            width: 30px;
+            background-color: white;
+            font-size: medium;
+            font-weight: bold;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        &:hover {
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+        }
+        &.clicked {
+            background-color: #1b5e20;
+        }
+    }
+}
+
+.add-box {
+    outline: none;
+    &:active {
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        text-decoration: none;
+    }
+}
+
+.remove-box {
+    margin: 10px;
+    outline: none;
+    &:active {
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        text-decoration: none;
+    }
+}
+
+.disable-box {
+
+    &:active {
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        text-decoration: none;
+    }
+    &.clicked {
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        text-decoration: none;
+    }
+}
